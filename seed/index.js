@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const _ = require('underscore');
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/airbnb', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/airbnbMorePlaces', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection;
 
@@ -45,4 +45,7 @@ const seedMorePlaces = async function() {
   })
 }
 
-seedMorePlaces();
+seedMorePlaces()
+  .then(() => {
+    setTimeout(() => {mongoose.connection.close()}, 3000)
+  });
