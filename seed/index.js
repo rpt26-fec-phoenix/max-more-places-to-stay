@@ -45,4 +45,7 @@ const seedMorePlaces = async function() {
   })
 }
 
-seedMorePlaces();
+seedMorePlaces()
+  .then(() => {
+    setTimeout(() => {mongoose.connection.close()}, 3000)
+  });
