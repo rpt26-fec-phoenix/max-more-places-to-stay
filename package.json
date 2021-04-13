@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "more-places-to-stay",
   "version": "",
   "description": "",
   "author": "",
@@ -9,14 +9,25 @@
   },
   "scripts": {
     "seed": "node seed/index.js",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "react-dev": "webpack --watch"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "mongoose": "^5.11.19",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "styled-components": "^5.2.3",
     "underscore": "^1.12.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
   }
 }
