@@ -11,10 +11,16 @@ const StyledListing = styled.div`
   scroll-snap-stop: always;
 `
 
-const Listing = (props) => {
+const Image = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+`
+
+const Listing = ({ details }) => {
   return (
     <StyledListing>
-      <div>Photo</div>
+      <div><Image src={details.primaryPhoto}></Image></div>
       <div>Average Reviews + Total Reviews</div>
       <div>typeOfPlace propertyType beds</div>
       <div>Title</div>

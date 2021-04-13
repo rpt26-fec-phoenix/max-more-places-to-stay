@@ -6,13 +6,13 @@ const StyledListings = styled.div`
   display: flex;
 `
 
-const Listings = (props) => {
+const Listings = ({ morePlaces }) => {
   return (
     <StyledListings>
-      <Listing/>
-      <Listing/>
-      <Listing/>
-      <Listing/>
+      <Listing details={morePlaces[0]}/>
+      <Listing details={morePlaces[1]}/>
+      <Listing details={morePlaces[2]}/>
+      <Listing details={morePlaces[3]}/>
     </StyledListings>
   )
 };

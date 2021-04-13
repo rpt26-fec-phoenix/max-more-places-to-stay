@@ -4,6 +4,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 import Listings from './Listings.jsx';
+import sampleData from '../sample-data.js'
 
 const StyledApp = styled.div`
   height: 100%;
@@ -33,7 +34,9 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      morePlaces: sampleData
+    };
   }
 
   render() {
@@ -43,7 +46,7 @@ class App extends Component {
           More Places to Stay
         </Header>
         <div>
-          <Listings/>
+          <Listings morePlaces={this.state.morePlaces}/>
         </div>
       </StyledApp>
     )
